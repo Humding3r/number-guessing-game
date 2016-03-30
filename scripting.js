@@ -1,10 +1,17 @@
-var number = Math.floor((Math.random() * 100000) + 1);
+var max = $("input[name=maximum]").val();
+
+var number = Math.floor((Math.random() * max) + 1);
 console.log("Looking at the source code, eh? Cheater...");
 console.log(number);
 
 $(document).ready(function() {
+    $("#fromXtoY").empty();
+    $("<p>I'm thinking of a number between 1 and " + max + ". What is it?</p>").appendTo("#fromXtoY");
   $("#reset").click(function() {
-    number = Math.floor((Math.random() * 100000) + 1);
+     max = $("input[name=maximum]").val();
+    number = Math.floor((Math.random() * max) + 1);
+    $("#fromXtoY").empty();
+    $("<p>I'm thinking of a number between 1 and " + max + ". What is it?</p>").appendTo("#fromXtoY");
 	console.log(number);
   });
 
