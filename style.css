@@ -1,0 +1,14 @@
+body {
+	text-align: center;
+	margin: 330px;
+}
+
+#submit {
+	background-color: lightblue;
+	transition: background-color 0.5s ease;
+}
+
+#reset {
+	background-color: lightblue;
+	transition: background-color 0.5s ease;
+}
