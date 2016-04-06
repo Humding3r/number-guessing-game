@@ -43,4 +43,21 @@ $(document).ready(function() {
 		$("#submit").css("background-color", "lightblue");
 	});
 
+    $("input[name=guess]").keypress(function( event ) {
+        if (event.which == 13) {
+            var playerGuessForEnter = $("input[name=guess]").val();
+
+            if (playerGuessForEnter == number) {
+               $('#result').empty();
+               $('<p>Congrats! ' + playerGuessForEnter + ' was right! You fiddled the riddle!</p>').appendTo('#result');
+           } else if (playerGuessForEnter < number) {
+               $('#result').empty();
+               $('<p>Your guess, ' + playerGuessForEnter + ', was too low. Try again.</p>').appendTo('#result');
+           } else if (playerGuessForEnter > number) {
+               $('#result').empty();
+               $('<p>Your guess, ' + playerGuessForEnter + ', was too high. Try again.</p>').appendTo('#result');
+           }
+        }
+    });
+
 });
