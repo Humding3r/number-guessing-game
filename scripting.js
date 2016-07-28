@@ -17,7 +17,7 @@ $(document).ready(function() {
 
 	$("#submit").click(function() {
 		var playerGuess = $("input[name=guess]").val();
-        if (playerGuess === 13.37) {
+        if (playerGuess == 13.37) {
             $('#result').empty();
             $('<p>Wha-- WHAT?! ARE YOU SERIOUS, MAN?! WHY ARE YOU CHEATIN\'!??!?!?!?!??!?!?!?!?');
         } else if (playerGuess == number) {
