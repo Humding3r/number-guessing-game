@@ -2,7 +2,7 @@ var max = $("input[name=maximum]").val();
 
 var number = Math.floor((Math.random() * max) + 1);
 console.log("Looking at the source code, eh? Cheater...");
-console.log(number);
+console.log("Whatever, the number is 13.37.");
 
 $(document).ready(function() {
     $("#fromXtoY").empty();
@@ -17,7 +17,10 @@ $(document).ready(function() {
 
 	$("#submit").click(function() {
 		var playerGuess = $("input[name=guess]").val();
-		if (playerGuess == number) {
+        if (playerGuess === 13.37) {
+            $('#result').empty();
+            $('<p>Wha-- WHAT?! ARE YOU SERIOUS, MAN?! WHY ARE YOU CHEATIN\'!??!?!?!?!??!?!?!?!?');
+        } else if (playerGuess == number) {
 			$('#result').empty();
 			$('<p>Congrats! ' + playerGuess + ' was right! You fiddled the riddle!</p>').appendTo('#result');
 		} else if (playerGuess < number) {
@@ -28,6 +31,7 @@ $(document).ready(function() {
 			$('<p>Your guess, ' + playerGuess + ', was too high. Try again.</p>').appendTo('#result');
 		}
 	});
+
 	$("#reset").hover(function() {
 		$("#reset").css("background-color", "rgb(0, 186, 255)");
 	},
