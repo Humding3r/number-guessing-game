@@ -19,7 +19,7 @@ $(document).ready(function() {
 		var playerGuess = $("input[name=guess]").val();
         if (playerGuess == 13.37) {
             $('#result').empty();
-            $('<p>Wha-- WHAT?! ARE YOU SERIOUS, MAN?! WHY ARE YOU CHEATIN\'!??!?!?!?!??!?!?!?!?');
+            $('<p>Wha-- WHAT?! ARE YOU SERIOUS, MAN?! WHY ARE YOU CHEATIN\'!??!?!?!?!??!?!?!?!?</p>').appendTo('#result');
         } else if (playerGuess == number) {
 			$('#result').empty();
 			$('<p>Congrats! ' + playerGuess + ' was right! You fiddled the riddle!</p>').appendTo('#result');
